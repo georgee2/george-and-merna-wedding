@@ -8,3 +8,4 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+- Site is prerendered to static HTML (dist/client) and deployed to GitHub Pages via .github/workflows/deploy.yml; BASE_PATH env sets the Vite base and router basepath — needed because Pages serves from /<repo>/.
