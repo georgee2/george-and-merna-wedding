@@ -16,6 +16,7 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
     // Prerender the page to static HTML so it can be hosted on GitHub Pages.
-    prerender: { enabled: true, crawlLinks: false },
+    prerender: { enabled: true },
+    pages: [{ path: "/", prerender: { enabled: true } }],
   },
 });
