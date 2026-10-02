@@ -4,7 +4,6 @@ import { Hero } from "@/components/wedding/Hero";
 import { Countdown } from "@/components/wedding/Countdown";
 import { Timeline } from "@/components/wedding/Timeline";
 import { Locations } from "@/components/wedding/Locations";
-import { Rsvp } from "@/components/wedding/Rsvp";
 import { Closing, Details } from "@/components/wedding/Closing";
 
 export const Route = createFileRoute("/")({
@@ -30,7 +29,6 @@ function Index() {
       <Locations />
       <Countdown />
       <Details />
-      <Rsvp />
       <Closing />
     </main>
   );
