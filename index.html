@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>George &amp; Merna — The Wedding Film</title>
+  <meta name="description" content="You're invited to the wedding of George &amp; Merna on November 10, 2026." />
+  <meta property="og:title" content="George &amp; Merna — The Wedding Film" />
+  <meta property="og:description" content="Two stories become one. November 10, 2026." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ ATMOSPHERE (Canvas Background) ═══════════════ -->
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atmosphere-gradient"></div>
+    <div class="atmosphere-glow-deep" id="glow-deep"></div>
+    <div class="atmosphere-glow-gold" id="glow-gold"></div>
+    <canvas id="starfield"></canvas>
+    <div class="atmosphere-vignette"></div>
+  </div>
+
+  <main class="main-content">
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero" id="welcome">
+      <div class="hero-glow animate-breathe" id="hero-glow" aria-hidden="true"></div>
+
+      <p class="eyebrow rise" style="animation-delay: 0.4s">Two stories become one.</p>
+
+      <h1 class="hero-title" id="hero-title">
+        <span class="hero-name text-gold-gradient rise" style="animation-delay: 1.4s">George</span>
+        <span class="hero-ampersand rise" style="animation-delay: 2.1s">&amp;</span>
+        <span class="hero-name text-gold-gradient rise" style="animation-delay: 2.6s">Merna</span>
+      </h1>
+
+      <p class="hero-date rise" style="animation-delay: 3.4s">November 10, 2026</p>
+
+      <span class="hero-rule rise" aria-hidden="true" style="animation-delay: 3.8s"></span>
+
+      <div class="scroll-hint rise" style="animation-delay: 4.4s" aria-hidden="true">
+        <span class="eyebrow" style="font-size: 0.55rem">Scroll</span>
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════ TIMELINE ═══════════════ -->
+    <section class="timeline-section" id="timeline">
+      <div class="timeline-header reveal">
+        <p class="eyebrow">The evening</p>
+        <h2 class="section-title">How the day unfolds</h2>
+      </div>
+
+      <div class="timeline">
+        <span class="timeline-stem" aria-hidden="true"></span>
+        <ol class="timeline-list">
+          <li class="timeline-entry reveal" data-threshold="0.5">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <p class="eyebrow">Ceremony</p>
+              <p class="timeline-time">5:00 PM</p>
+              <p class="timeline-venue">St. George and Anba Ebram</p>
+            </div>
+          </li>
+          <li class="timeline-entry reveal" data-threshold="0.5">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <p class="eyebrow">Celebration</p>
+              <p class="timeline-time">7:00 PM</p>
+              <p class="timeline-venue">Crystal Palace Hall</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════════════ LOCATIONS ═══════════════ -->
+    <section class="locations-section" id="locations">
+      <div class="locations-grid">
+        <div class="reveal">
+          <article class="glass-card location-card" data-depth="8" id="loc-ceremony">
+            <span class="card-glow" aria-hidden="true"></span>
+            <p class="eyebrow" style="position:relative">Ceremony</p>
+            <h3 class="location-name">St. George and Anba Ebram</h3>
+            <p class="location-time">5:00 PM</p>
+            <a href="https://maps.app.goo.gl/H1WdsBZTX1UfzVN18" target="_blank" rel="noopener noreferrer" class="maps-btn">Open in Maps</a>
+          </article>
+        </div>
+        <div class="reveal" style="transition-delay: 180ms">
+          <article class="glass-card location-card" data-depth="14" id="loc-reception">
+            <span class="card-glow" aria-hidden="true"></span>
+            <p class="eyebrow" style="position:relative">Celebration</p>
+            <h3 class="location-name">Crystal Palace Hall</h3>
+            <p class="location-time">7:00 PM</p>
+            <a href="https://maps.app.goo.gl/x4aTF9q6QFmPABNBA" target="_blank" rel="noopener noreferrer" class="maps-btn">Open in Maps</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ COUNTDOWN ═══════════════ -->
+    <section class="countdown-section" id="countdown" aria-label="Countdown to the wedding">
+      <div class="reveal">
+        <p class="eyebrow">Counting the moments</p>
+        <ul class="countdown-grid" id="countdown-timer">
+          <li class="countdown-cell">
+            <span class="countdown-number" id="cd-days">000</span>
+            <span class="eyebrow countdown-label">DAYS</span>
+          </li>
+          <li class="countdown-cell countdown-bordered">
+            <span class="countdown-number" id="cd-hours">00</span>
+            <span class="eyebrow countdown-label">HOURS</span>
+          </li>
+          <li class="countdown-cell countdown-bordered">
+            <span class="countdown-number" id="cd-minutes">00</span>
+            <span class="eyebrow countdown-label">MINUTES</span>
+          </li>
+          <li class="countdown-cell countdown-bordered">
+            <span class="countdown-number" id="cd-seconds">00</span>
+            <span class="eyebrow countdown-label">SECONDS</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════ DETAILS ═══════════════ -->
+    <section class="details-section" id="details">
+      <div class="reveal">
+        <p class="eyebrow">Dress code</p>
+        <p class="details-body">Formal evening wear — deep tones, champagne, and ivory.</p>
+      </div>
+      <div class="reveal">
+        <p class="details-message">Your presence is the only gift we wish for.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ CLOSING ═══════════════ -->
+    <footer class="closing" id="closing">
+      <div class="reveal">
+        <p class="closing-line">Here's to love,</p>
+      </div>
+      <div class="reveal" style="transition-delay: 400ms">
+        <p class="closing-line">laughter,</p>
+      </div>
+      <div class="reveal" style="transition-delay: 800ms">
+        <p class="closing-line">and everything that comes next.</p>
+      </div>
+
+      <div class="reveal closing-footer" style="transition-delay: 1500ms">
+        <span class="closing-star animate-breathe" aria-hidden="true"></span>
+        <p class="closing-names text-gold-gradient">George &amp; Merna</p>
+        <p class="eyebrow closing-date-label">November 10, 2026</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
