@@ -24,15 +24,10 @@ jobs:
       - run: bun run build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
-      - name: Locate static output
-        run: |
-          DIR=$(dirname "$(find dist .output -name index.html -path '*public*' -o -name index.html -path '*client*' | head -n1)")
-          echo "Static dir: $DIR"
-          touch "$DIR/.nojekyll"
-          echo "STATIC_DIR=$DIR" >> $GITHUB_ENV
+      - run: touch dist/client/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.STATIC_DIR }}
+          path: dist/client
   deploy:
     needs: build
     runs-on: ubuntu-latest
